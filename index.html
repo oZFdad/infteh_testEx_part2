@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Тестовая работа для ИнфТех</title>
+</head>
+<body>
+	<form name="pain">
+		<input type="number" class="raz" name="fild1" size="10" maxlength="15" value="0"/><br>
+		<input type="number" class="raz" name="fild2" size="10" maxlength="15" value="0"/><br>
+		<input type="number" class="raz" name="fild3" size="10" maxlength="15" readonly/><br>
+	</form>
+	
+    <script>
+	
+		var val1 = document.pain.fild1;
+		var val2 = document.pain.fild2;
+		var val3 = document.pain.fild3;
+		
+		val3.value = +val1.value + +val2.value;
+		
+		function onkeyup(e)
+		{
+			val3.value = +val1.value + +val2.value;
+		}
+		
+		val1.addEventListener("keyup", onkeyup);
+		val2.addEventListener("keyup", onkeyup);
+		
+    </script>
+	
+	
+	
+	
+	<style>
+.raz 
+{ 
+  -moz-appearance: textfield;
+}
+.raz::-webkit-inner-spin-button 
+{ 
+  display: none;
+}
+</style>
+</body>
+</html>
